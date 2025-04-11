@@ -1,0 +1,433 @@
+<style>
+:root {
+    --primary: #2a2a2a;
+    --secondary: #4a90e2;
+    --text: #333;
+    --light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--primary);
+    color: var(--light);
+    overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(42, 42, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary), #1a1a1a);
+    z-index: -1;
+}
+
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.1;
+    animation: floatShape 15s infinite linear;
+}
+
+.profile-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem auto;
+    perspective: 1000px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--secondary);
+    animation: profileFloat 6s ease-in-out infinite;
+}
+
+.portfolio-item {
+    position: relative;
+    background: linear-gradient(145deg, #383838, #2a2a2a);
+    box-shadow: 20px 20px 60px #1a1a1a,
+                -20px -20px 60px #3a3a3a;
+}
+
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(74, 144, 226, 0.1));
+    z-index: 1;
+}
+
+@keyframes profileFloat {
+    0%, 100% { transform: rotateX(0) rotateY(0) translateY(0); }
+    25% { transform: rotateX(5deg) rotateY(5deg) translateY(-10px); }
+    50% { transform: rotateX(0) rotateY(0) translateY(-20px); }
+    75% { transform: rotateX(-5deg) rotateY(-5deg) translateY(-10px); }
+}
+
+@keyframes floatShape {
+    0% { transform: translate(0, 0) rotate(0); }
+    100% { transform: translate(var(--tx), var(--ty)) rotate(360deg); }
+}
+
+.portfolio-grid {
+    perspective: 2000px;
+}
+
+.cube-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    animation: rotateCube 20s infinite linear;
+}
+
+.cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 144, 226, 0.1);
+    border: 1px solid var(--secondary);
+}
+
+@keyframes rotateCube {
+    0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+    100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+.section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.portfolio-item {
+    background: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.skill-item {
+    background: var(--secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: var(--light);
+    font-size: 0.9rem;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.contact-form {
+    background: #333;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: var(--light);
+}
+
+button {
+    background: var(--secondary);
+    color: var(--light);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--light);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-content">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="floating-shapes">
+        <svg class="shape" style="--tx: 100vw; --ty: -100vh;" width="50" height="50" viewBox="0 0 50 50">
+            <polygon points="25,5 45,45 5,45" fill="rgba(74, 144, 226, 0.2)"/>
+        </svg>
+        <svg class="shape" style="--tx: -100vw; --ty: 100vh;" width="40" height="40" viewBox="0 0 40 40">
+            <rect width="40" height="40" fill="rgba(74, 144, 226, 0.2)"/>
+        </svg>
+        <div class="cube-container" style="top: 20%; left: 80%;">
+            <div class="cube">
+                <div class="cube-face" style="transform: translateZ(50px);"></div>
+                <div class="cube-face" style="transform: translateZ(-50px);"></div>
+                <div class="cube-face" style="transform: rotateY(90deg) translateZ(50px);"></div>
+                <div class="cube-face" style="transform: rotateY(-90deg) translateZ(50px);"></div>
+                <div class="cube-face" style="transform: rotateX(90deg) translateZ(50px);"></div>
+                <div class="cube-face" style="transform: rotateX(-90deg) translateZ(50px);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-content">
+        <div class="profile-container">
+            <img class="profile-pic" src="/a/41593c79-56a8-47b9-9bf6-6cc0e05b96fe" alt="Professional headshot of Sabin Budhathoki" width="200" height="200">
+        </div>
+        <h1>Sabin Budhathoki</h1>
+        <p>Content Creator | Teacher | Web Developer</p>
+    </div>
+</section>
+
+<section class="section" id="work">
+    <h2>Featured Work</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Web Development Projects</h3>
+                <p>Modern responsive websites built with latest technologies</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Educational Content</h3>
+                <p>Online courses and tutorials for web development</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Content Creation</h3>
+                <p>Digital content strategy and production</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>Skills & Expertise</h2>
+    <div class="skills-container">
+        <div class="skill-item">HTML5</div>
+        <div class="skill-item">CSS3</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">React</div>
+        <div class="skill-item">Node.js</div>
+        <div class="skill-item">Teaching</div>
+        <div class="skill-item">Content Strategy</div>
+        <div class="skill-item">Video Production</div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-form">
+        <div class="form-group">
+            <input type="text" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <textarea placeholder="Message" rows="5"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </div>
+    <div class="social-links">
+        <a href="https://github.com"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Portfolio items hover effect
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = -(x - centerX) / 20;
+            
+            item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            const shadowX = (x - centerX) / 10;
+            const shadowY = (y - centerY) / 10;
+            
+            item.style.boxShadow = `${shadowX}px ${shadowY}px 20px rgba(0,0,0,0.4)`;
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            item.style.boxShadow = '20px 20px 60px #1a1a1a, -20px -20px 60px #3a3a3a';
+        });
+    });
+
+    // Form validation
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Message sent successfully!');
+        form.reset();
+    });
+});
+</script>
+
+</body></html>
