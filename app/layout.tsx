@@ -1,20 +1,14 @@
-import type { Metadata } from 'next'
+import type { ReactNode } from "react"
+import ClientRootLayout from "./page"
+
+export const metadata = {
+  title: "EduWarn Nepal",
+    generator: 'v0.dev'
+}
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return <ClientRootLayout>{children}</ClientRootLayout>
+}
+
+
 import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
-}
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
-}
