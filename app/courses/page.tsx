@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { BookOpen, ChevronRight, Search, Filter, ArrowRight } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { images } from "@/lib/images"
+import { getSubjectImageUrl } from "@/lib/images-helper"
 
 export default function CoursesPage() {
   // Subject data
@@ -67,20 +67,6 @@ export default function CoursesPage() {
       color: "yellow",
     },
   ]
-
-  // Helper function to get image URL for a subject
-  const getSubjectImageUrl = (slug: string) => {
-    // Convert slug to camelCase for subjects like "computer-science"
-    const key = slug.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
-
-    // Check if the subject image exists in the images.subjects object
-    if (images.subjects && images.subjects[key as keyof typeof images.subjects]) {
-      return images.subjects[key as keyof typeof images.subjects]
-    }
-
-    // Fallback to placeholder
-    return "/placeholder.svg?height=200&width=300"
-  }
 
   return (
     <div className="flex min-h-screen flex-col">
