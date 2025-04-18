@@ -232,7 +232,7 @@ export default function AboutPage() {
                   <h3 className="font-bold text-xl mb-1">Samraj Budhathoki</h3>
                   <p className="text-blue-600 text-sm mb-3">Creative Designer</p>
                   <p className="text-gray-600 text-sm mb-4">
-                    Technology expert focused on creating amazing designs understabding topics better.
+                    Technology expert focused on creating amazing designs understanding topics better.
                   </p>
                   <div className="flex space-x-3">
                     <Link
