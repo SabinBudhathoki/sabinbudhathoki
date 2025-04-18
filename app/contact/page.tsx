@@ -87,7 +87,7 @@ export default function ContactPage() {
                   <p className="text-gray-600 mb-2">Sunday - Friday:</p>
                   <p className="text-gray-600">6:00 AM - 6:00 PM</p>
                   <p className="text-gray-600 mt-2 mb-2">Saturday:</p>
-                  <p className="text-gray-600">2PM:00 AM - 5:00 PM</p>
+                  <p className="text-gray-600">2:00 PM- 5:00 PM</p>
                 </CardContent>
               </Card>
             </div>
