@@ -55,9 +55,9 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-bold mb-2">Call Us</h3>
                   <p className="text-gray-600 mb-2">Main Office:</p>
-                  <p className="text-red-600">+977 1 4123456</p>
+                  <p className="text-red-600">+977 9840034153</p>
                   <p className="text-gray-600 mt-2 mb-2">Support Hotline:</p>
-                  <p className="text-red-600">+977 1 4123457</p>
+                  <p className="text-red-600">-</p>
                 </CardContent>
               </Card>
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   <h3 className="font-bold mb-2">Visit Us</h3>
                   <p className="text-gray-600 mb-2">Our Office:</p>
                   <p className="text-gray-600">
-                    Kumaripati, Lalitpur
+                    Charikot,Dolakha
                     <br />
                     Bagmati Province
                     <br />
@@ -84,12 +84,10 @@ export default function ContactPage() {
                     <Clock className="h-6 w-6 text-red-600" />
                   </div>
                   <h3 className="font-bold mb-2">Office Hours</h3>
-                  <p className="text-gray-600 mb-2">Monday - Friday:</p>
-                  <p className="text-gray-600">9:00 AM - 5:00 PM</p>
+                  <p className="text-gray-600 mb-2">Sunday - Friday:</p>
+                  <p className="text-gray-600">6:00 AM - 6:00 PM</p>
                   <p className="text-gray-600 mt-2 mb-2">Saturday:</p>
-                  <p className="text-gray-600">10:00 AM - 2:00 PM</p>
-                  <p className="text-gray-600 mt-2 mb-2">Sunday:</p>
-                  <p className="text-gray-600">Closed</p>
+                  <p className="text-gray-600">2PM:00 AM - 5:00 PM</p>
                 </CardContent>
               </Card>
             </div>
