@@ -187,7 +187,7 @@ export default function AboutPage() {
 
               <Card className="overflow-hidden hover:shadow-md transition-all">
                 <Image
-                  src={images.founders.samir || "/placeholder.svg"}
+                  src={"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_YNWsB52TBODmpxuA02CXLsKnL4vYoHKfn8EN5aSEfF0Q3nmD2oI9PvN1GfW_uZhghTK1IjOekve6z-2JOnhb2VUqWfHrDq1_Qy1_Kvy0v5_RxrpZU8UHN5t0zywVhROEzBCq1VWwEfNrm2hKui_0C3ZwNMeskFmDCY3I_m17O5Vb0yXMRv2ZqWsu9TI/s320/IMG_20250418_095043_879.jpg"}
                   alt="Samir Ghimire"
                   width={300}
                   height={300}
@@ -195,7 +195,7 @@ export default function AboutPage() {
                 />
                 <CardContent className="p-6">
                   <h3 className="font-bold text-xl mb-1">Samir Ghimire</h3>
-                  <p className="text-blue-600 text-sm mb-3">Co-Founder</p>
+                  <p className="text-blue-600 text-sm mb-3">Content Strategist</p>
                   <p className="text-gray-600 text-sm mb-4">
                     Technology expert focused on creating innovative learning solutions for students.
                   </p>
@@ -209,7 +209,42 @@ export default function AboutPage() {
                       Facebook
                     </Link>
                     <Link
-                      href="https://wa.me/9840034153"
+                      href="https://wa.me/9766908406"
+                      target="_blank"
+                      className="flex items-center text-sm text-green-600 hover:underline"
+                    >
+                      <Phone className="h-4 w-4 mr-1" />
+                      WhatsApp
+                    </Link>
+                  </div>
+                </CardContent>
+                </Card>
+                
+                <Card className="overflow-hidden hover:shadow-md transition-all">
+                <Image
+                  src={"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_YNWsB52TBODmpxuA02CXLsKnL4vYoHKfn8EN5aSEfF0Q3nmD2oI9PvN1GfW_uZhghTK1IjOekve6z-2JOnhb2VUqWfHrDq1_Qy1_Kvy0v5_RxrpZU8UHN5t0zywVhROEzBCq1VWwEfNrm2hKui_0C3ZwNMeskFmDCY3I_m17O5Vb0yXMRv2ZqWsu9TI/s320/IMG_20250418_095043_879.jpg"}
+                  alt="Samraj Budhathoki"
+                  width={300}
+                  height={300}
+                  className="w-full h-[300px] object-cover"
+                />
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl mb-1">Samraj Budhathoki</h3>
+                  <p className="text-blue-600 text-sm mb-3">Creative Designer</p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Technology expert focused on creating amazing designs understabding topics better.
+                  </p>
+                  <div className="flex space-x-3">
+                    <Link
+                      href="https://www.facebook.com/samraz.budathoki.1"
+                      target="_blank"
+                      className="flex items-center text-sm text-blue-600 hover:underline"
+                    >
+                      <Facebook className="h-4 w-4 mr-1" />
+                      Facebook
+                    </Link>
+                    <Link
+                      href="https://wa.me/9865438982"
                       target="_blank"
                       className="flex items-center text-sm text-green-600 hover:underline"
                     >
