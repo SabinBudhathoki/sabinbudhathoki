@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com/share/18M1w2jVbB/"
+                href="https://www.facebook.com/profile.php?id=61568426081607&rdid=bvVf4W2orIJfp8Uq"
                 target="_blank"
                 className="text-gray-400 hover:text-white"
               >
@@ -41,7 +41,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://instagram.com/moonbd7" target="_blank" className="text-gray-400 hover:text-white">
+              <Link href="https://www.instagram.com/eduwarn_nepal/" target="_blank" className="text-gray-400 hover:text-white">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
