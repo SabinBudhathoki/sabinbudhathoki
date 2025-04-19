@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com/profile.php?id=61568426081607&rdid=bvVf4W2orIJfp8Uq"
+                href="https://www.facebook.com/profile.php?id=61575318204998&rdid=bvVf4W2orIJfp8Uq"
                 target="_blank"
                 className="text-gray-400 hover:text-white"
               >
